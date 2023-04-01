@@ -278,7 +278,7 @@ def lasso_regression():
     pipe = Pipeline([
         ('scaler', RobustScaler()),
         ('pca', None),
-        ('regressor', Lasso())
+        ('regressor', Lasso(random_state=42))
     ])
 
     scoring = {
@@ -347,7 +347,7 @@ def ridge_regression():
     pipe = Pipeline([
     ('scaler', RobustScaler()),
     ('pca', None),
-    ('regressor', Ridge())
+    ('regressor', Ridge(random_state=42))
     ])
     
     scoring = {
@@ -437,7 +437,7 @@ def elastic_net():
     pipe = Pipeline([
     ('scaler', RobustScaler()),
     ('pca', None),
-    ('regressor', ElasticNet())
+    ('regressor', ElasticNet(random_state=42))
     ])
 
     scoring = {
@@ -665,7 +665,7 @@ def svm_regression():
 def d_tree():
     pipe = Pipeline([
         ('scaler', RobustScaler()),
-        ('dt', DecisionTreeRegressor())
+        ('dt', DecisionTreeRegressor(random_state=42))
     ])
 
     scoring = {
@@ -736,7 +736,7 @@ def d_tree():
 def extra_tree():
     pipe = Pipeline([
         ('scaler', RobustScaler()),
-        ('et', ExtraTreesRegressor())
+        ('et', ExtraTreesRegressor(random_state=42))
     ])
 
     scoring = {
@@ -802,7 +802,7 @@ def extra_tree():
 def bagging():
     pipe = Pipeline([
         ('scaler', RobustScaler()),
-        ('bag', BaggingRegressor())
+        ('bag', BaggingRegressor(random_state=42))
     ])
 
     scoring = {
@@ -865,7 +865,7 @@ def bagging():
 def random_forest():
     pipe = Pipeline([
         ('scaler', RobustScaler())
-        ('rf', RandomForestRegressor())
+        ('rf', RandomForestRegressor(random_state=42))
     ])
 
     scoring = {
